@@ -1,0 +1,25 @@
+{
+    "name": "elbinfr/mvc",
+    "description": "Working environment mvc",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Elbin Flores",
+            "email": "elbinfr.88@gmail.com"
+        }
+    ],
+    "require": {
+        "smarty/smarty": "^3.1"
+    },
+    "autoload": {
+        "files": [
+            "core/BaseHelper.php",
+            "core/router.php"
+        ],
+        "psr-4": {
+            "App\\": "app/",
+            "Core\\": "core/"
+        }
+    }
+}
