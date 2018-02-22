@@ -19,12 +19,12 @@ class BaseModel
     /**
      * The primary key for the model.
      */
-    protected $primary;
+    protected $primary = 'id';
 
     /**
      * Indicates if the IDs are auto-incrementing.
      */
-    protected $autoIncrement;
+    protected $autoIncrement = true;
 
 	public function __construct()
 	{
