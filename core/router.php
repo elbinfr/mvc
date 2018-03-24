@@ -6,14 +6,17 @@ function prepareRoute($request)
 
 	$indexPosition = strpos($url, 'index.php');
 
-	$urlArray = explode('/', substr ( $url , $indexPosition ));
-
-    if (count($urlArray) < 2) {
+    if ($indexPosition === false) {
         return '/';
+    } else {
+        $urlArray = explode('/', substr ( $url , $indexPosition ));
+
+        if (count($urlArray) < 2) {
+            return '/';
+        }
+
+        return $urlArray[1];
     }
-
-	return $urlArray[1];
-
 }
 
 function processRoute($action)
